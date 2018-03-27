@@ -1,0 +1,150 @@
+@import "/assets/css/stico.css";
+@import "/assets/css/animate.css";
+@import "/assets/css/card.css";
+@import "/assets/css/flex.css";
+
+html, body{
+	background-color: #ffffff;
+  text-align: center;
+}
+section{
+	padding-top: 2.5%;
+}
+
+/*
+ showcase
+*/
+.showcase{
+  padding-top: 2%;
+  margin:0 0 0 0;
+	padding-bottom: 2%;
+}
+
+.showcase .text{
+	padding-top: 5%;
+	text-align:center;
+}
+
+.showcase .text .animateOne {
+   	font-size:20px;
+ 	-webkit-animation-duration: 8s;
+  	-webkit-animation-iteration-count: 1;
+  	animation-duration: 8s;
+  	animation-iteration-count: 1;
+}
+
+.showcase .text .animateTwo {
+   	font-size:20px;
+   	-webkit-animation-delay: 6s;
+ 	-webkit-animation-duration: 8s;
+  	-webkit-animation-iteration-count: 1;
+  	animation-delay: 6s;
+  	animation-duration: 8s;
+  	animation-iteration-count: 1;
+}
+/*4:3 of width*/
+.showcase .video{
+	width:50%;
+  height:50%;
+	padding-bottom:20%;
+}
+
+.showcase .video iframe{
+	position: absolute;
+	height:50%;
+	width:50%;
+	text-align:center;
+}
+
+/*about*/
+.about-card{
+  height:50%;
+}
+
+.card-video {
+  position: relative;
+  padding: 0;
+  margin: 0;
+	padding-bottom:60%;
+}
+
+.card-video iframe{
+  left: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+	position: absolute;
+	height:auto;
+	width:100%;
+}
+
+.chat {
+    position: relative;
+    padding-bottom: 2%;
+}
+
+.chat iframe{
+  margin:0;
+  border: 0;
+  padding: 0;
+  background: #ffffff;
+	height:400px;
+	width:60%;
+	text-align:center;
+}
+
+.chat-title{
+   height: 10%;
+   top: -5%;
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   padding-bottom: 2%;
+   
+}
+
+.chat-channels{
+  height: 100%;
+  padding-bottom: 5%;
+      
+}
+
+.chat-channels button{
+   height: 120px;
+}
+
+.chat-channels span svg{
+   font-size: 120px;
+}
+
+
+.chat-channels button{
+   width: 200px;
+   color:#ffffff !important;
+}
+
+.chat-connect-button {
+   position: absolute;
+   z-index:1;
+   font-size: 25px;
+   height: 50px;
+   width: 20%;
+}
+
+.chat-connect-button span{
+   font-size: 25px;
+}
+
+.chat-connect-button span svg{
+   font-size: 25px;
+}
+
+.chat-connect-button {
+   color:#ffffff !important;
+   font-size: 25px;
+   height: 150px; 
+}
+
+.footer{
+   padding-bottom: 1%;
+}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* 
+    Created on : 26-dic-2016, 18:07:53
+    Author     : Lili
+*/
+html, body{
+	background-color: #ffffff;
+  margin: 0;
+}
+
+.text-white {
+   color: #ffffff !important;
+}
+
+.text-green {
+   color: #00AF66!important;
+}
+
+.background-blue {
+   background-color: #007DBA !important;
+}
+
+.background-green {
+    background-color: #00AF66!important;
+}
+
+.app-bar div {
+    color: #ffffff !important;
+    background-color: #007DBA !important;
+}
+
+.app-bar a {
+    color: #ffffff !important;
+    background-color: #007DBA !important;
+}
+
+.app-bar button {
+    color: #ffffff !important;
+    background-color: #007DBA !important;
+}
+
+.menu-app-bar div {
+    color: #ffffff !important;
+    background-color: #007DBA !important;
+}
+
+.menu-app-bar button {
+    color: #ffffff !important;
+    background-color: #007DBA !important;
+}
+
