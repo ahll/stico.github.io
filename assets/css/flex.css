@@ -4,6 +4,7 @@
     flexGrow: 1;
 }
 .flex {
-    text-align: left;
+    width: 100%;
+    text-align: center;
     flex: 1;
 }

@@ -1,0 +1,27 @@
+@import "/assets/css/stico.css";
+@import "/assets/css/animate.css";
+@import "/assets/css/card.css";
+@import "/assets/css/flex.css";
+
+html, body{
+	background-color: #ffffff;
+  text-align: center;
+}
+section{
+	padding-top: 2.5%;
+}
+
+#chatContent {
+   width:100%;
+}
+
+#chatContent iframe{
+  margin:0;
+  border: 0;
+  padding: 0;
+  padding-top: 5%;
+  background: #ffffff;
+	height:400px;
+	width:60%;
+	text-align:center;
+}

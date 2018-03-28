@@ -10,37 +10,29 @@ function ShowCase(props) {
         { id: "showcase", className: "showcase background-blue text-white" },
         React.createElement(
             "div",
-            null,
-            React.createElement(
-                "div",
-                { className: "video" },
-                React.createElement("iframe", { src: "https://www.youtube.com/embed/V0FtjeFV1tg", frameBorder: "0" })
-            )
+            { className: "video" },
+            React.createElement("iframe", { src: "https://www.youtube.com/embed/V0FtjeFV1tg", frameBorder: "0" })
         ),
         React.createElement(
             "div",
-            null,
+            { className: "text" },
+            React.createElement(
+                "h1",
+                null,
+                text().showcase.title
+            ),
             React.createElement(
                 "div",
-                { className: "text" },
+                null,
                 React.createElement(
-                    "h1",
-                    null,
-                    text().showcase.title
+                    "p",
+                    { className: "animateOne animated zoomIn" },
+                    text().showcase.content
                 ),
                 React.createElement(
-                    "div",
-                    null,
-                    React.createElement(
-                        "p",
-                        { className: "animateOne animated zoomIn" },
-                        text().showcase.content
-                    ),
-                    React.createElement(
-                        Button,
-                        { size: "small", href: "#chat", className: "text-white" },
-                        text().showcase.button
-                    )
+                    Button,
+                    { size: "small", href: "#chat", className: "text-white" },
+                    text().showcase.button
                 )
             )
         )
@@ -260,49 +252,33 @@ class Chat extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            iframeUrl: "https://webchat.botframework.com/embed/d2cfab16?s=JzXx7BDwpbU.cwA.vho.ZssTGSuetrvi70O4HR7pHt3SYz2Avo1pXjgCNTjywts",
-            name: "Stico"
-        };
+        this.iframeUrl = "https://webchat.botframework.com/embed/d2cfab16?s=JzXx7BDwpbU.cwA.vho.ZssTGSuetrvi70O4HR7pHt3SYz2Avo1pXjgCNTjywts";
+        this.state = Channels[0];
     }
 
-    changeIframe(url, name) {
+    changeIframe(index) {
 
-        this.setState({
-            iframeUrl: this.state.iframeUrl,
-            url: url,
-            name: name
-        });
+        this.setState(Channels[index]);
     }
 
 
     render() {
 
-        var content = React.createElement(
-            "div",
-            { id: "chatContent" },
-            React.createElement("iframe", { id: "chat-iframe", src: this.state.iframeUrl })
-        );
-
-        if (this.state.name !== 'Stico') {
-            content = React.createElement(
-                "div",
-                { id: "chatContent" },
-                React.createElement(
-                    Button,
-                    { target: "_blank", href: this.state.url, className: "chat-connect-button", size: "big", color: "primary" },
-                    React.createElement(SendIcon, null)
-                )
-            );
-        }
+        const ChannelList = Channels.map((channel, index) => React.createElement(
+            Button,
+            { key: index, onClick: () => this.changeIframe(index), label: channel.name },
+            channel.icon
+        ));
 
         return React.createElement(
             "section",
             { id: "chat", className: "background-blue text-white" },
             React.createElement("h1", null),
-            React.createElement(Channels, { onclick: (url, name) => {
-                    this.changeIframe(url, name);
-                }, className: "chat-channels background-blue text-white" }),
+            React.createElement(
+                "div",
+                { className: "chat-channels" },
+                ChannelList
+            ),
             React.createElement("h1", null),
             React.createElement(
                 "div",
@@ -312,7 +288,15 @@ class Chat extends React.Component {
                     { id: "chatTitle", className: "chat-title background-blue" },
                     this.state.name
                 ),
-                content
+                React.createElement(
+                    "div",
+                    { id: "chatContent" },
+                    React.createElement(
+                        Button,
+                        { target: "_blank", href: this.state.url, className: "chat-connect-button", size: "large", color: "primary" },
+                        React.createElement(SendIcon, null)
+                    )
+                )
             )
         );
     }

@@ -76618,7 +76618,7 @@ Urls = require('./shared/Urls');
 Page = require('./shared/Page');
 Utils = require('./shared/Utils');
 
-Channels = require('./shared/decorator/Channel').All;
+Channels = require('./shared/decorator/Channel').ChannelList;
 
 },{"./shared/Language":766,"./shared/Page":767,"./shared/Urls":768,"./shared/Utils":769,"./shared/decorator/Channel":771,"babel-register":2,"material-ui":383,"mdi-material-ui/ContactMail":475,"mdi-material-ui/HeartOutline":477,"mdi-material-ui/Linkedin":478,"mdi-material-ui/Robot":479,"mdi-material-ui/Send":480,"mdi-material-ui/ShareVariant":481,"moment":485,"react":694,"react-dom":494,"remarkable":702}],766:[function(require,module,exports){
 var Language = {
@@ -76630,14 +76630,13 @@ module.exports = Language;
 var Material = require('material-ui');
 var AppBar = require('./decorator/AppBar');
 var DrawerAppBar = require('./decorator/DrawerAppBar');
+var NavigationBar = require('./decorator/NavigationBar');
 var Drawer = Material.Drawer;
 var Routes = require('./router/Routes');
 var List = Material.List;
 var ListItem = Material.ListItem;
 var ListItemText = Material.ListItemText;
 var ListItemIcon = Material.ListItemIcon;
-
-var Channels = require('./decorator/Channel').All;
 
 class Page extends React.Component {
     constructor(props) {
@@ -76728,8 +76727,12 @@ class Page extends React.Component {
                 React.createElement(AppBar, {
                     changeLanguage: () => this.changeLanguage(),
                     language: this.state.language,
-                    title: this.state.title,
-                    rightMenu: React.createElement(Channels, { title: this.state.rightTitle }),
+                    title: React.createElement(
+                        'span',
+                        { className: 'app-bar-title' },
+                        this.state.title
+                    ),
+                    titleLogo: React.createElement('img', { className: 'app-bar-logo', src: '/assets/img/logo_negative.png' }),
                     menuOnclick: () => this.handleToggle() })
             ),
             React.createElement(
@@ -76750,7 +76753,12 @@ class Page extends React.Component {
                     )
                 )
             ),
-            childrenWithProps
+            childrenWithProps,
+            React.createElement(
+                'div',
+                { className: 'navigation-bar' },
+                React.createElement(NavigationBar, null)
+            )
         );
     }
 }
@@ -76758,7 +76766,7 @@ class Page extends React.Component {
 
 module.exports = Page;
 
-},{"./decorator/AppBar":770,"./decorator/Channel":771,"./decorator/DrawerAppBar":772,"./router/Routes":774,"material-ui":383}],768:[function(require,module,exports){
+},{"./decorator/AppBar":770,"./decorator/DrawerAppBar":772,"./decorator/NavigationBar":773,"./router/Routes":775,"material-ui":383}],768:[function(require,module,exports){
 var Urls = {
     Main: '/app/pages/user/profile.html',
     Profile: '/app/pages/user/profile.html',
@@ -76808,7 +76816,7 @@ var AppBar = function (props) {
         { className: 'root-flex' },
         React.createElement(
             MaterialAppBar,
-            { position: 'static' },
+            { position: 'fixed' },
             React.createElement(
                 ToolBar,
                 null,
@@ -76818,6 +76826,12 @@ var AppBar = function (props) {
                     React.createElement(MenuIcon, null)
                 ),
                 React.createElement(
+                    Typography,
+                    { type: 'title', color: 'inherit', className: 'flex' },
+                    props.titleLogo,
+                    props.title
+                ),
+                React.createElement(
                     IconButton,
                     { onClick: () => props.changeLanguage(), color: 'primary', 'aria-label': 'Menu' },
                     React.createElement(
@@ -76825,11 +76839,6 @@ var AppBar = function (props) {
                         { type: 'title', color: 'inherit', className: 'flex' },
                         props.language
                     )
-                ),
-                React.createElement(
-                    Typography,
-                    { type: 'title', color: 'inherit', className: 'flex' },
-                    props.title
                 ),
                 props.rightMenu
             )
@@ -76845,63 +76854,30 @@ var TelegramIcon = require('mdi-material-ui/Telegram').default;
 var SlackIcon = require('mdi-material-ui/Slack').default;
 var SkypeIcon = require('mdi-material-ui/Skype').default;
 
-var ChannelButton = function (props) {
-
-    if (props.onclick) {
-        return React.createElement(
-            IconButton,
-            { onClick: () => props.onclick(props.url, props.name), color: 'primary' },
-            props.icon
-        );
-    }
-
-    return React.createElement(
-        IconButton,
-        { href: props.url, color: 'primary' },
-        props.icon
-    );
-};
-
-var FacebookMessenger = function (props) {
-
-    return React.createElement(ChannelButton, { url: 'https://www.messenger.com/t/SticoBot', name: 'Facebook Messenger', onclick: props.onclick, icon: React.createElement(FacebookMessengerIcon, null) });
-};
-
-var Telegram = function (props) {
-    return React.createElement(ChannelButton, { url: 'https://telegram.me/SticoPRO_bot', name: 'Telegram', onclick: props.onclick, icon: React.createElement(TelegramIcon, null) });
-};
-
-var Slack = function (props) {
-    return React.createElement(ChannelButton, { onclick: props.onclick, name: 'Slack', url: 'https://lafabricadebots.slack.com/oauth/336598129843.13b40b8d079bc76d085ca18b9b9dc2038055d88329a174c148aaac4315e23ef5', icon: React.createElement(SlackIcon, null) });
-};
-
-var Skype = function (props) {
-    return React.createElement(ChannelButton, { onclick: props.onclick, name: 'Skype', url: 'https://join.skype.com/bot/d2cfab16-d54f-4994-9b30-ebf89ef5314c', icon: React.createElement(SkypeIcon, null) });
-};
-
-var Stico = function (props) {
-    return React.createElement(ChannelButton, { onclick: props.onclick, name: 'Stico', url: '#chat', icon: React.createElement(SticoIcon, null) });
-};
-
-var All = function (props) {
-    return React.createElement(
-        'div',
-        { className: props.className },
-        React.createElement(
-            'span',
-            null,
-            props.title
-        ),
-        React.createElement(FacebookMessenger, { onclick: props.onclick }),
-        React.createElement(Telegram, { onclick: props.onclick }),
-        React.createElement(Skype, { onclick: props.onclick }),
-        React.createElement(Slack, { onclick: props.onclick }),
-        React.createElement(Stico, { onclick: props.onclick })
-    );
-};
+const ChannelList = [{
+    "url": "https://www.messenger.com/t/SticoBot",
+    "name": "Facebook Messenger",
+    "icon": React.createElement(FacebookMessengerIcon, null)
+}, {
+    "url": "https://telegram.me/SticoPRO_bot",
+    "name": "Telegram",
+    "icon": React.createElement(TelegramIcon, null)
+}, {
+    "url": "https://lafabricadebots.slack.com/oauth/336598129843.13b40b8d079bc76d085ca18b9b9dc2038055d88329a174c148aaac4315e23ef5",
+    "name": "Slack",
+    "icon": React.createElement(SlackIcon, null)
+}, {
+    "url": "https://join.skype.com/bot/d2cfab16-d54f-4994-9b30-ebf89ef5314c",
+    "name": "Skype",
+    "icon": React.createElement(SkypeIcon, null)
+}, {
+    "url": "../chat/chat.html",
+    "name": "Web",
+    "icon": React.createElement(SticoIcon, null)
+}];
 
 module.exports = {
-    FacebookMessenger, All
+    ChannelList
 };
 
 },{"mdi-material-ui/FacebookMessenger":476,"mdi-material-ui/Skype":482,"mdi-material-ui/Slack":483,"mdi-material-ui/Telegram":484}],772:[function(require,module,exports){
@@ -76935,6 +76911,36 @@ var DrawerAppBar = function (props) {
 module.exports = DrawerAppBar;
 
 },{"material-ui-icons/Menu":214,"material-ui/AppBar":217,"material-ui/ToolBar":355,"material-ui/Typography":361}],773:[function(require,module,exports){
+const channelList = require('./Channel').ChannelList;
+var BottomNavigation = require('material-ui/BottomNavigation').default;
+var BottomNavigationAction = require('material-ui/BottomNavigation/BottomNavigationAction').default;
+
+class NavigationBar extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  select(e, index) {
+    window.open(channelList[index].url, "_blank");
+  }
+
+  render() {
+
+    const listItems = channelList.map((channel, index) => React.createElement(BottomNavigationAction, { key: index, label: channel.name, icon: channel.icon }));
+
+    return React.createElement(
+      BottomNavigation,
+      { value: this.state.index, onChange: this.select, showLabels: true },
+      listItems
+    );
+  }
+}
+
+module.exports = NavigationBar;
+
+},{"./Channel":771,"material-ui/BottomNavigation":224,"material-ui/BottomNavigation/BottomNavigationAction":223}],774:[function(require,module,exports){
 var RoutsText = {
     "es_ES": {
         "home": "Stico",
@@ -76947,7 +76953,7 @@ var RoutsText = {
 
 module.exports = RoutsText;
 
-},{}],774:[function(require,module,exports){
+},{}],775:[function(require,module,exports){
 var RoutsData = require('./Routes.data.js');
 var Stico = SticoIcon;
 var Home = require('material-ui-icons/Home').default;
@@ -76966,8 +76972,8 @@ class MenuItem {
     }
 }
 
-var Routes = [new MenuItem("#home", text().home, React.createElement(Home, null)), new MenuItem("#about", text().about, React.createElement(Stico, null)), new MenuItem("#creator", text().creator, React.createElement(Creator, null)), new MenuItem("#function", text().function, React.createElement(Doing, null)), new MenuItem("#chat", text().chat, React.createElement(Chat, null))];
+var Routes = [new MenuItem("../home/home.html#page", text().home, React.createElement(Home, null)), new MenuItem("../home/home.html#about", text().about, React.createElement(Stico, null)), new MenuItem("../home/home.html#creator", text().creator, React.createElement(Creator, null)), new MenuItem("../home/home.html#function", text().function, React.createElement(Doing, null)), new MenuItem("../home/home.html#chat", text().chat, React.createElement(Chat, null))];
 
 module.exports = Routes;
 
-},{"./Routes.data.js":773,"material-ui-icons/Chat":211,"material-ui-icons/FlashOn":212,"material-ui-icons/Home":213,"material-ui-icons/People":215}]},{},[765]);
+},{"./Routes.data.js":774,"material-ui-icons/Chat":211,"material-ui-icons/FlashOn":212,"material-ui-icons/Home":213,"material-ui-icons/People":215}]},{},[765]);
