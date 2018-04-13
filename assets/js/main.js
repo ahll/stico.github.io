@@ -76732,7 +76732,7 @@ class Page extends React.Component {
                         { className: 'app-bar-title' },
                         this.state.title
                     ),
-                    titleLogo: React.createElement('img', { className: 'app-bar-logo', src: '/assets/img/logo_negative.png' }),
+                    titleLogo: React.createElement('img', { className: 'app-bar-logo', src: '/assets/img/logo.png' }),
                     menuOnclick: () => this.handleToggle() })
             ),
             React.createElement(
