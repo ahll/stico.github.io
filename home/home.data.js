@@ -24,7 +24,7 @@ HomeData = {
             }, {
                 "like": "",
                 "share": "",
-                "image": "selflearning.jpg",
+                "image": "selflearning.png",
                 "title": "Self learning",
                 "content": "A medida que voy hablando e interactuando con las personas," + " voy aprendiendo y mi capacidad de procesar correctamente vuestras frases aumenta. " + "Así que cada vez será más fácil entendernos, podré responder mejor" + " y prestar más servicios de utilidad."
             }]
@@ -70,7 +70,7 @@ HomeData = {
             "title": "¡Puedo hacer muchas cosas!",
             "data": [{
                 "video": "https://www.youtube.com/embed/PTCsKaHK-G0",
-                "content": "Actualmente me gusta mucho el fútbol y sigo todos los partidos de los equipos de Primera División (sí, todos, soy un robot, no me canso). Te puedo ir narrando los partidos en directo de la Liga, Champions y Europa League y Copa del Rey. Si me dices cuál es tu equipo te informaré de cuándo empieza cada partido y te puedo explicar todo lo que va pasando en tiempo real y toda la información sobre la jornada, clasificación, resultados, etc…Puedes ir cambiando los equipos, añadiendo o quitando equipos a seguir, o cambiar el nivel de notificaciones para que te dé más o menos información (no me voy a quejar por muchas veces que cambies de idea) o dejarme en silencio cuando no quieras que te informe durante un partido.",
+                "content": "Me gusta mucho el fútbol y sigo todos los partidos de Primera División de la Liga, la Copa, la Champions y Europa League (sí, todos, soy un robot, no me canso). Dime cuáles son tus equipos favoritos y te informaré de cuándo empieza cada partido y lo que va pasando en tiempo real. También ofrezco información sobre la jornada, clasificación, resultados, … Puedes añadir o quitar equipos a seguir, cambiar el nivel de notificaciones para que te dé más o menos información o silenciarme cuando no quieras que te informe durante un partido",
                 "title": "Fútbol",
                 "share": "",
                 "like": ""
@@ -165,8 +165,8 @@ HomeData = {
             "title": "¡I can do many things!",
             "data": [{
                 "video": "https://www.youtube.com/embed/PTCsKaHK-G0",
-                "content": "Currently I really like football and I follow all the games of Spanish La Liga teams (yes, everyone, I am a robot, I do not get tired). I can narrate you live all matches of the League, Champions and Europa League and Spanish Cup. If you tell me which is your favourite team I will inform you of when each match starts and I can explain everything that is happening in real time and all the information about the matchday, table, results, etc ... You can change the team, adding or removing teams to follow, or change the level of notifications to make me give you more or less information (I will not complain for many times that you change your mind) or silence me when you do not want notifications during a game. ",
-                "title": "Footbal matches",
+                "content": "I really like football and I follow all games of Spanish La Liga, Spanish Cup, Champions and Europa League (yes, all of them, I am a robot and I don’t get tired). Just tell me your favorite teams and I will inform you when each match starts and I what that is going on real time. Also, you can ask me about current round matches, classification, results, ... You can add or remove teams you follow, or change notifications level to get more or less information on matches or silence me when you do not want notifications during a game",
+                "title": "FootbalL matches",
                 "share": "",
                 "like": ""
             }, {

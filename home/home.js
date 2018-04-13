@@ -208,20 +208,7 @@ function FunctionCard(props) {
                     data.content
                 )
             ),
-            React.createElement(
-                CardActions,
-                null,
-                React.createElement(
-                    Button,
-                    { size: "small", color: "primary" },
-                    React.createElement(ShareIcon, null)
-                ),
-                React.createElement(
-                    Button,
-                    { size: "small", color: "primary" },
-                    React.createElement(LikeIcon, null)
-                )
-            )
+            React.createElement(CardActions, null)
         )
     );
 }
@@ -252,7 +239,7 @@ class Chat extends React.Component {
 
     constructor(props) {
         super(props);
-        this.iframeUrl = "https://webchat.botframework.com/embed/d2cfab16?s=JzXx7BDwpbU.cwA.vho.ZssTGSuetrvi70O4HR7pHt3SYz2Avo1pXjgCNTjywts";
+        this.iframeUrl = "https://webchat.botframework.com/embed/d2cfab16?s=AeshkHjdjEc.cwA.-C4.GGTGur1yzExUi0bmVAPI555rcw6Ggt0KEvQsoSLmCxsJzXx7BDwpbU.cwA.vho.ZssTGSuetrvi70O4HR7pHt3SYz2Avo1pXjgCNTjywts";
         this.state = Channels[0];
     }
 
