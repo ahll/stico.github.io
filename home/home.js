@@ -66,20 +66,7 @@ function AboutCard(props) {
                     data.content
                 )
             ),
-            React.createElement(
-                CardActions,
-                null,
-                React.createElement(
-                    Button,
-                    { size: "small", color: "primary" },
-                    React.createElement(ShareIcon, null)
-                ),
-                React.createElement(
-                    Button,
-                    { size: "small", color: "primary" },
-                    React.createElement(LikeIcon, null)
-                )
-            )
+            React.createElement(CardActions, null)
         )
     );
 }
