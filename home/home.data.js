@@ -106,7 +106,7 @@ HomeData = {
             "button": "Chat With Me"
         },
         "about": {
-            "title": "I'm stico, your leasure chatbot",
+            "title": "I'm stico, your life assistant",
             "data": [{
                 "like": "",
                 "share": "",
@@ -146,8 +146,8 @@ HomeData = {
                 "linkedin": "https://www.linkedin.com/in/alberto-g%C3%B3mez-gallego-280b1141/",
                 "email": "alberto@lafabricadebots.com"
             }, {
-                "avatar": "/assets/img/cfo.jpg",
-                "title": "CFO",
+                "avatar": "/assets/img/cmo.jpg",
+                "title": "CMO",
                 "name": "Raul",
                 "profession": "The social",
                 "content": "The genius behind images and publications on social networks. How does he manage to be active in so many groups?",

@@ -76796,7 +76796,7 @@ class Page extends React.Component {
 
     render() {
 
-        const listItems = Routes.map(route => React.createElement(
+        const listItems = Routes(this.state.language).map(route => React.createElement(
             ListItem,
             { button: true, component: 'a', href: route.url, key: route.name },
             React.createElement(
@@ -76844,7 +76844,15 @@ class Page extends React.Component {
                     React.createElement(
                         'div',
                         { className: 'menu-app-bar' },
-                        React.createElement(DrawerAppBar, { title: this.state.title, menuOnclick: () => this.handleToggle() })
+                        React.createElement(DrawerAppBar, {
+                            title: this.state.title,
+                            titleLogo: React.createElement(
+                                'div',
+                                { className: 'app-bar-logo' },
+                                React.createElement('img', { src: '/assets/img/logo_iso.png' }),
+                                React.createElement('img', { src: '/assets/img/logo.png' })
+                            ),
+                            menuOnclick: () => this.handleToggle() })
                     ),
                     React.createElement(
                         List,
@@ -77028,7 +77036,8 @@ var DrawerAppBar = function (props) {
                                 Typography,
                                 { type: 'title', color: 'inherit' },
                                 props.title
-                        )
+                        ),
+                        props.titleLogo
                 )
         );
 };
@@ -77069,10 +77078,17 @@ module.exports = NavigationBar;
 var RoutsText = {
     "es_ES": {
         "home": "Stico",
-        "about": "Quein soy",
+        "about": "Quién soy",
         "creator": "Mis creadores",
-        "function": "Que puedo hacer",
+        "function": "Qué puedo hacer",
         "chat": "Hablamos"
+    },
+    "en_US": {
+        "home": "Stico",
+        "about": "Who am I",
+        "creator": "My creators",
+        "function": "What can I do",
+        "chat": "Chat with me"
     }
 };
 
@@ -77085,9 +77101,6 @@ var Home = require('material-ui-icons/Home').default;
 var Creator = require('material-ui-icons/People').default;
 var Doing = require('material-ui-icons/FlashOn').default;
 var Chat = require('material-ui-icons/Chat').default;
-var text = function () {
-    return RoutsData[Locale];
-};
 
 class MenuItem {
     constructor(url, name, icon) {
@@ -77097,7 +77110,10 @@ class MenuItem {
     }
 }
 
-var Routes = [new MenuItem("../home/home.html#page", text().home, React.createElement(Home, null)), new MenuItem("../home/home.html#about", text().about, React.createElement(Stico, null)), new MenuItem("../home/home.html#creator", text().creator, React.createElement(Creator, null)), new MenuItem("../home/home.html#function", text().function, React.createElement(Doing, null)), new MenuItem("../home/home.html#chat", text().chat, React.createElement(Chat, null))];
+function Routes(locale) {
+    var text = RoutsData[locale];
+    return [new MenuItem("../home/home.html#page", text.home, React.createElement(Home, null)), new MenuItem("../home/home.html#about", text.about, React.createElement(Stico, null)), new MenuItem("../home/home.html#creator", text.creator, React.createElement(Creator, null)), new MenuItem("../home/home.html#function", text.function, React.createElement(Doing, null)), new MenuItem("../home/home.html#chat", text.chat, React.createElement(Chat, null))];
+}
 
 module.exports = Routes;
 
