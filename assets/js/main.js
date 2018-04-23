@@ -76683,7 +76683,6 @@ React = require('react');
 Remarkable = require('remarkable');
 ReactDOM = require('react-dom');
 require("babel-register");
-
 moment = require('moment');
 
 Material = require('material-ui');
@@ -76828,7 +76827,12 @@ class Page extends React.Component {
                         { className: 'app-bar-title' },
                         this.state.title
                     ),
-                    titleLogo: React.createElement('img', { className: 'app-bar-logo', src: '/assets/img/logo.png' }),
+                    titleLogo: React.createElement(
+                        'div',
+                        { className: 'app-bar-logo' },
+                        React.createElement('img', { src: '/assets/img/logo_iso.png' }),
+                        React.createElement('img', { src: '/assets/img/logo.png' })
+                    ),
                     menuOnclick: () => this.handleToggle() })
             ),
             React.createElement(

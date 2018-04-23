@@ -43,8 +43,8 @@ html, body{
     height: 100%;
 }
 
-.app-bar-logo{
-   height: 40px;
+.app-bar-logo img{
+   height: 30px;
 }
 
 .app-bar-title{

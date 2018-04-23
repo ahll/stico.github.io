@@ -3,12 +3,12 @@ HomeData = {
         "title": "  ",
         "rightTitle": "Hablamos : ",
         "showcase": {
-            "title": "STICO - Your Life Assistante",
-            "content": "No importa, Dónde, Cuándo, Cómo, Siempre contigo",
+            "title": "stico - Tu asistente de ocio y vida",
+            "content": "No importa Dónde, Cuándo, Cómo, Siempre contigo",
             "button": "Habla conmigo"
         },
         "about": {
-            "title": "Soy stico, el chat bot assistante",
+            "title": "Soy stico, tu asistente de ocio",
             "data": [{
                 "like": "",
                 "share": "",
@@ -24,44 +24,44 @@ HomeData = {
             }, {
                 "like": "",
                 "share": "",
-                "image": "selflearning.png",
+                "image": "selflearning.jpg",
                 "title": "Self learning",
                 "content": "A medida que voy hablando e interactuando con las personas," + " voy aprendiendo y mi capacidad de procesar correctamente vuestras frases aumenta. " + "Así que cada vez será más fácil entendernos, podré responder mejor" + " y prestar más servicios de utilidad."
             }]
         },
         "creator": {
-            "title": "Los genios detrás de mi",
+            "title": "Los genios detrás de mi - La Fábrica de Bots",
             "data": [{
-                "avatar": "",
+                "avatar": "/assets/img/ceo.jpg",
                 "title": "CEO",
                 "name": "Claudio",
-                "profession": "profession",
-                "content": "El viejo del pelo blanco. ¿Qué hace un tío que jugaba con el Spectrum en una Start-up de 2017?",
-                "linkedin": "",
+                "profession": "El jefe",
+                "content": "El del pelo gris. ¿Qué hace un tío que jugaba con el Spectrum en 1984 en una Start-up de 2017?",
+                "linkedin": "https://www.linkedin.com/in/claudiofernandez/",
                 "email": "claudio@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/coo.jpg",
                 "title": "COO",
                 "name": "Alberto",
-                "profession": "profession",
-                "content": "bla bla bla",
-                "linkedin": "El entrenador de Stico. Le hace sudar cada día para que siempre esté en forma (aunque STICO no tenga cuerpo).",
+                "profession": "El profe",
+                "content": "El entrenador de Stico. Le hace sudar cada día para que siempre esté en forma (aunque STICO no tenga cuerpo).",
+                "linkedin": "https://www.linkedin.com/in/alberto-g%C3%B3mez-gallego-280b1141/",
                 "email": "alberto@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/cmo.jpg",
                 "title": "CMO",
                 "name": "Raúl",
                 "profession": "El de las redes...",
                 "content": "El genio de las imágenes y las publicaciones en las redes sociales. ¿Cómo le da tiempo a estar activo en tantos grupos?",
-                "linkedin": "",
+                "linkedin": "https://www.linkedin.com/in/rmartinezgutierrez/",
                 "email": "raul@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/cto.jpg",
                 "title": "CTO",
                 "name": "Lili",
                 "profession": "El tequi",
                 "content": "A los humanos nos cuesta entenderle, pero cuando habla con las máquinas no hay quien se exprese mejor",
-                "linkedin": "",
+                "linkedin": "https://www.linkedin.com/in/lilihe/",
                 "email": "lili@lafabricadebots.com"
             }]
 
@@ -89,9 +89,12 @@ HomeData = {
             }]
 
         },
+
         "footer": {
+            "phone": "Teléfono: +34 669355535",
+            "mail": "E-mail: info@sticobot.com",
             "content": "Create, Design and Copy right reserved by",
-            "company": "La fabrica de bots © 2018"
+            "company": "La fábrica de bots © 2018"
         }
     },
     "en_US": {
@@ -115,7 +118,7 @@ HomeData = {
                 "share": "",
                 "image": "service.jpg",
                 "title": "Servicios",
-                "content": "Chatbots are computer applications programmed to converse." + "We are able to understand the natural language " + "and respond based on the services that we are offer."
+                "content": "Chatbots are computer applications programmed to converse." + "We are able to understand the natural language " + "and respond based on the services we have been trained and can serve."
             }, {
                 "like": "",
                 "share": "",
@@ -125,39 +128,39 @@ HomeData = {
             }]
         },
         "creator": {
-            "title": "The genius behind me",
+            "title": "The genius behind me - La Fábrica de Bots",
             "data": [{
-                "avatar": "",
+                "avatar": "/assets/img/ceo.jpg",
                 "title": "CEO",
                 "name": "Claudio",
                 "profession": "The boss",
-                "content": "The old and gray-headed one. What's a guy who played with an Spectrum doing in a 2017 startup?",
-                "linkedin": "",
-                "email": ""
+                "content": "The gray-headed chap. What's a guy who played with an Spectrum doing in a 2017 startup?",
+                "linkedin": "https://www.linkedin.com/in/claudiofernandez/",
+                "email": "claudio@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/coo.jpg",
                 "title": "COO",
                 "name": "Alberto",
                 "profession": "The coach",
                 "content": "Stico's trainer. He makes it sweat every day, so it is is always in shape (although Stico has no body)",
-                "linkedin": "",
-                "email": ""
+                "linkedin": "https://www.linkedin.com/in/alberto-g%C3%B3mez-gallego-280b1141/",
+                "email": "alberto@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/cfo.jpg",
                 "title": "CFO",
                 "name": "Raul",
                 "profession": "The social",
-                "content": "The genius of images and publications on social networks. How does he have time to be active in so many groups?",
-                "linkedin": "",
-                "email": ""
+                "content": "The genius behind images and publications on social networks. How does he manage to be active in so many groups?",
+                "linkedin": "https://www.linkedin.com/in/rmartinezgutierrez/",
+                "email": "raul@lafabricadebots.com"
             }, {
-                "avatar": "",
+                "avatar": "/assets/img/cto.jpg",
                 "title": "CTO",
                 "name": "Lili",
                 "profession": "The tecky",
                 "content": "We have troubles understanding him, but when he talks with machines there is no one who expresses better",
-                "linkedin": "",
-                "email": ""
+                "linkedin": "https://www.linkedin.com/in/lilihe/",
+                "email": "lili@lafabricadebots.com"
             }]
 
         },
@@ -185,8 +188,10 @@ HomeData = {
 
         },
         "footer": {
+            "phone": "Phone: +34 669355535",
+            "mail": "E-mail: info@sticobot.com",
             "content": "Create, Design and Copy right reserved by",
-            "company": "La fabrica de bots © 2018"
+            "company": "La fábrica de bots © 2018"
         }
     }
 };

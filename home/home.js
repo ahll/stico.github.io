@@ -103,11 +103,7 @@ function CreatorCard(props) {
             Card,
             null,
             React.createElement(CardHeader, {
-                avatar: React.createElement(
-                    Avatar,
-                    { "aria-label": "Recipe" },
-                    data.avatar
-                ),
+                avatar: React.createElement(Avatar, { "aria-label": "Recipe", src: data.avatar }),
                 title: data.title,
                 subheader: data.profession
             }),
@@ -130,12 +126,12 @@ function CreatorCard(props) {
                 null,
                 React.createElement(
                     IconButton,
-                    { href: data.linkedin },
+                    { href: data.linkedin, target: "_blank" },
                     React.createElement(LinkedinIcon, null)
                 ),
                 React.createElement(
                     IconButton,
-                    { href: data.email },
+                    { href: "mailto:" + data.email, alt: data.email },
                     React.createElement(ContactMailIcon, null)
                 )
             )
@@ -226,7 +222,6 @@ class Chat extends React.Component {
 
     constructor(props) {
         super(props);
-        this.iframeUrl = "https://webchat.botframework.com/embed/d2cfab16?s=AeshkHjdjEc.cwA.-C4.GGTGur1yzExUi0bmVAPI555rcw6Ggt0KEvQsoSLmCxsJzXx7BDwpbU.cwA.vho.ZssTGSuetrvi70O4HR7pHt3SYz2Avo1pXjgCNTjywts";
         this.state = Channels[0];
     }
 
@@ -281,6 +276,16 @@ function Footer(props) {
     return React.createElement(
         "section",
         { id: "footer", className: "footer background-green text-white" },
+        React.createElement(
+            "p",
+            null,
+            data.mail
+        ),
+        React.createElement(
+            "p",
+            null,
+            data.phone
+        ),
         React.createElement(
             "p",
             null,
