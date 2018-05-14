@@ -1,0 +1,17 @@
+@import "/assets/css/stico.css";
+@import "/assets/css/flex.css";
+
+html, body{
+    background-color: #ffffff;
+    text-align: center;
+}
+
+section{
+    padding-top: 2.5%;
+}
+
+.section{
+    margin: 10px auto 0px auto;
+    padding: 2.5%;
+    width: 60%;
+}

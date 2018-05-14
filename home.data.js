@@ -13,14 +13,14 @@ HomeData = {
                 "like": "",
                 "share": "",
                 "image": "intelligence.jpg",
-                "title": "inteligencia artificial",
+                "title": "Inteligencia artificial",
                 "content": "Soy una inteligencia artificial en constante evolución." + " Los humanos evolucionáis en millones de años. " + "Yo, evoluciono en segundos. Ahora estoy aquí, " + "y en segundos puedo estar en tu móvil"
             }, {
                 "like": "",
                 "share": "",
                 "image": "service.jpg",
                 "title": "Servicios",
-                "content": "Los chatbots somos aplicaciones informáticas programadas para mantener conversaciones." + "Somos capaces de entender el lenguaje natural (el que utilizas a diario con cualquier persona) " + "y realizar acciones o responder según me han enseñado a hacerlo"
+                "content": "Los chatbots somos aplicaciones informáticas programadas para mantener conversaciones." + "Soy capaz de entender el lenguaje natural (el que utilizas a diario con cualquier persona) " + "y realizar acciones o responder según me han enseñado a hacerlo"
             }, {
                 "like": "",
                 "share": "",
@@ -30,7 +30,7 @@ HomeData = {
             }]
         },
         "creator": {
-            "title": "Los genios detrás de mi - La Fábrica de Bots",
+            "title": "Los genios detrás de mí - La Fábrica de Bots",
             "data": [{
                 "avatar": "/assets/img/ceo.jpg",
                 "title": "CEO",
@@ -106,7 +106,7 @@ HomeData = {
             "button": "Chat With Me"
         },
         "about": {
-            "title": "I'm stico, your life assistant",
+            "title": "I'm stico, your leasure chatbot",
             "data": [{
                 "like": "",
                 "share": "",
@@ -117,7 +117,7 @@ HomeData = {
                 "like": "",
                 "share": "",
                 "image": "service.jpg",
-                "title": "Servicios",
+                "title": "Services",
                 "content": "Chatbots are computer applications programmed to converse." + "We are able to understand the natural language " + "and respond based on the services we have been trained and can serve."
             }, {
                 "like": "",
@@ -165,11 +165,11 @@ HomeData = {
 
         },
         "function": {
-            "title": "¡I can do many things!",
+            "title": "I can do many things!",
             "data": [{
                 "video": "https://www.youtube.com/embed/PTCsKaHK-G0",
                 "content": "I really like football and I follow all games of Spanish La Liga, Spanish Cup, Champions and Europa League (yes, all of them, I am a robot and I don’t get tired). Just tell me your favorite teams and I will inform you when each match starts and I what that is going on real time. Also, you can ask me about current round matches, classification, results, ... You can add or remove teams you follow, or change notifications level to get more or less information on matches or silence me when you do not want notifications during a game",
-                "title": "FootbalL matches",
+                "title": "Football matches",
                 "share": "",
                 "like": ""
             }, {

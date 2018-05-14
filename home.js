@@ -306,12 +306,10 @@ class Home extends React.Component {
         this.state = {
             locale: Locale
         };
-        this.rightTitle = props.rightTitle;
     }
 
     render() {
 
-        this.rightTitle(text().rightTitle);
         return React.createElement(
             "div",
             null,
@@ -326,10 +324,9 @@ class Home extends React.Component {
 }
 
 window.onload = function () {
-
     ReactDOM.render(React.createElement(
         Page,
-        { title: text().title, rightTitle: text().rightTitle },
+        { title: text().title },
         React.createElement(Home, null)
     ), document.getElementById("page"));
 };
