@@ -43,6 +43,10 @@ html, body{
     height: 100%;
 }
 
+.app-bar header {
+    z-index: 1400;
+}
+
 .app-bar-logo img{
    height: 30px;
 }
