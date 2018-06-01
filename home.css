@@ -73,22 +73,6 @@ section{
 }
 
 
-@media only screen and (max-width: 400px) {
-    .showcase .video{
-        width:0%;
-        height:50%;
-        padding-bottom:60%;
-    }
-    
-    .showcase .video iframe{
-        position: absolute;
-        height:50%;
-        width:100%;
-        text-align:center;
-    }
-}
-
-
 
 /*about*/
 .about-card{
@@ -184,6 +168,7 @@ section{
 }
 
 .modal-content {
+    overflow-y: scroll;
     margin: 8%;
     background-color: #ffffff;
     display: flex;
@@ -191,5 +176,37 @@ section{
 }
 
 .modal-media{
-    width: 100%;
+    padding: 8%;
+    width: 56%;
+    max-height: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    .showcase .video{
+        width:0%;
+        height:50%;
+        padding-bottom:60%;
+    }
+    
+    .showcase .video iframe{
+        position: absolute;
+        height:50%;
+        width:100%;
+        text-align:center;
+    }
+    
+    .modal-content {
+        overflow-y: scroll;
+        margin-top: 20%;
+        background-color: #ffffff;
+        display: block;
+        overflow: auto;
+    }
+
+    .modal-media{
+        padding: 8%;
+        width: 80%;
+        height: 80%;
+    }
+
 }
